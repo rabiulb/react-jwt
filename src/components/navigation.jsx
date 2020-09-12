@@ -54,16 +54,16 @@ export class Navigation extends Component {
                   <Link to="/gallery">Gallery</Link>
                
               </li>
-              <li>
+              {/* <li>
                
                   <Link to="/testimonial">Testimonials</Link>
                
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                
                   <Link to="/team">Team</Link>
                
-              </li>
+              </li> */}
               <li>
                 
                 <Link to="/contact">Contact</Link>

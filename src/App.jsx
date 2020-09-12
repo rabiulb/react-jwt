@@ -52,12 +52,12 @@ export class App extends Component {
             <Route path="/gallery">
             <Gallery />
             </Route>
-            <Route path="/testimonial">
+            {/* <Route path="/testimonial">
             <Testimonials data={this.state.landingPageData.Testimonials} />
-            </Route>
-            <Route path="/team">
+            </Route> */}
+            {/* <Route path="/team">
             <Team data={this.state.landingPageData.Team} />
-            </Route>
+            </Route> */}
             <Route path="/contact">
             <Contact data={this.state.landingPageData.Contact} />
             </Route>
