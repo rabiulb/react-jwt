@@ -1,6 +1,17 @@
 import React, { Component } from "react";
+import JsonData from '../data/data.json';
 
 export class Services extends Component {
+  state = {
+    landingPageData: {},
+  }
+  getlandingPageData() {
+    this.setState({ landingPageData: JsonData })
+  }
+
+  componentDidMount() {
+    this.getlandingPageData();
+  }
   render() {
     return (
       <div id="services" className="text-center">
@@ -13,8 +24,8 @@ export class Services extends Component {
             </p>
           </div>
           <div className="row">
-            {this.props.data
-              ? this.props.data.map((d, i) => (
+            {this.state.landingPageData.Features
+              ? this.state.landingPageData.Features.map((d, i) => (
                   <div  key={`${d.name}-${i}`} className="col-md-4">
                     {" "}
                     <i className={d.icon}></i>

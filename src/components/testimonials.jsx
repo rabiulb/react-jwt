@@ -1,6 +1,19 @@
 import React, { Component } from "react";
+import JsonData from '../data/data.json';
 
 export class testimonials extends Component {
+
+  state = {
+    landingPageData: {},
+  }
+  getlandingPageData() {
+    this.setState({ landingPageData: JsonData })
+  }
+
+  componentDidMount() {
+    this.getlandingPageData();
+  }
+
   render() {
     return (
       <div id="testimonials">
@@ -9,8 +22,8 @@ export class testimonials extends Component {
             <h2>What our clients say</h2>
           </div>
           <div className="row">
-            {this.props.data
-              ? this.props.data.map((d, i) => (
+            {this.state.landingPageData.Testimonials
+              ? this.state.landingPageData.Testimonials.map((d, i) => (
                   <div key={`${d.name}-${i}`} className="col-md-4">
                     <div className="testimonial">
                       <div className="testimonial-image">
